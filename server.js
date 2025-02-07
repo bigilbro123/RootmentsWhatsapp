@@ -6,10 +6,10 @@ import cookieParser from 'cookie-parser';
 import { sendWhatsAppMessage } from './controller/WhatsappController.js';
 dotenv.config();
 
-app.use(express.json());
-app.use(cookieParser());
 
 const app = express();
+app.use(express.json());
+app.use(cookieParser());
 
 
 
