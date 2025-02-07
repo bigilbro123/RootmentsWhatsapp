@@ -1,9 +1,13 @@
 import dotenv from 'dotenv';
 import express from 'express'
 import router from './route/Whatsapp.js';
+import cookieParser from 'cookie-parser';
+
 import { sendWhatsAppMessage } from './controller/WhatsappController.js';
 dotenv.config();
 
+app.use(express.json());
+app.use(cookieParser());
 
 const app = express();
 
