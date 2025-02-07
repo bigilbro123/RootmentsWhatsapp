@@ -64,3 +64,17 @@ export const sendWhatsAppMessage = async (phone, message) => {
         console.error('Error sending WhatsApp message:', error);
     }
 };
+
+
+
+export const salesWhatsAppZoho = async (req, res) => {
+    try {
+        // (A) Parse Zoho invoice data
+        const payload = req.body;
+        console.log("Zoho Books Invoice Webhook Data:", payload);
+
+    } catch (error) {
+        console.error("Error handling invoice webhook:", error?.message);
+        return res.status(500).send("Error processing invoice webhook");
+    }
+};
