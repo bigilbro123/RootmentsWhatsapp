@@ -36,7 +36,7 @@ export const WhatsAppZoho = async (req, res) => {
         console.log("Zoho Books Invoice Webhook Data:", payload);
 
         const invoiceId = payload.invoice_id || payload.data?.invoice_id;
-        const invoiceUrl = payload.Invoice_Url || payload.data?.Invoice_Url;
+        const invoiceUrl = payload.invoice_url || payload.data?.invoice_url;
         const name = payload.name || payload.data?.name;
         const phoneNumber = payload.contact_mobile_phone || payload.data.contact_mobile_phone
 
