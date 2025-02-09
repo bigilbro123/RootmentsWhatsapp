@@ -1,5 +1,6 @@
 import express from 'express';
-import { salesWhatsAppZoho, WhatsAppZoho } from '../controller/WhatsappController.js'
+import { salesWhatsAppZoho, } from '../controller/WhatsappController.js'
+import { WhatsAppZoho } from '../controller/WhatsAppCloudApi.js'
 
 const router = express.Router();
 router.post('/invoice-webhook', WhatsAppZoho);
