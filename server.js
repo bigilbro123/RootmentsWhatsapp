@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express'
 import router from './route/Whatsapp.js';
 import cookieParser from 'cookie-parser';
-
+import axios from 'axios'
 import { sendWhatsAppMessage } from './controller/WhatsappController.js';
 dotenv.config();
 
@@ -29,6 +29,7 @@ app.use('/zoho', router)
 
 
 
+
 // cron.schedule("* * * * *", async () => {
 //   console.log("Running AlertNotification every minute for testing...");
 //   try {
@@ -44,7 +45,7 @@ app.use('/zoho', router)
 
 // sendWhatsAppMessage('917736724727', 'Running AlertNotification every minute for testing...')
 
-const port = 7000;
+const port = 5000;
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
