@@ -38,13 +38,14 @@ export const WhatsAppZoho = async (req, res) => {
         const invoiceId = payload.invoice_id || payload.data?.invoice_id;
         const invoiceUrl = payload.Invoice_Url || payload.data?.Invoice_Url;
         const name = payload.name || payload.data?.name;
-        
+        const phoneNumber = payload.contact_mobile_phone || payload.data.contact_mobile_phone
+
         if (!invoiceId) {
             console.error("No invoice ID found in payload");
             return res.status(400).send("No invoice ID found");
         }
 
-        const customerPhone = `91${payload.contact_mobile_phone || "1234567890"}`;
+        const customerPhone = phoneNumber.length < 10 ? `91${phoneNumber}` : phoneNumber;
 
         const message = `Hello ${name},\nYour invoice ${invoiceId} has been created in Zoho Books! Here is your invoice URL: ${invoiceUrl}`;
         await sendWhatsAppMessage(customerPhone, message);
