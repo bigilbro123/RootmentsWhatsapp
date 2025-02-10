@@ -32,7 +32,7 @@ const sendWhatsAppMessage = async (phone, message) => {
     }
 };
 
-export const WhatsAppZoho = async (req, res) => {
+export const WhatsAppSalesZoho = async (req, res) => {
     try {
         const payload = req.body;
         console.log("Zoho Books Sales Order Webhook Data:", payload);
