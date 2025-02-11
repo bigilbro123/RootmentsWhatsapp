@@ -1,7 +1,5 @@
 
-import bodyParser from 'body-parser'
 
-app.use(bodyParser.json());
 
 const VERIFY_TOKEN = "EAAIxXzYDBZAwBOZCZAncmShNjxNevPFMeiToZCnBmFxnD4HC1uzwIdCF8dYZByq1EofKeXQMfSgcdS6rTtwajw4ZCBEa0SevvLJNxldcZCHGqQbuFpaqpV0nTYrqz0T6ibWIakoUIMCYqTqEvcuZBHRJYIgV7Evio8Ckb6y39uA02GIwTuqhLC675RYc6p7llrmjJwZDZD";
 
